@@ -6,14 +6,15 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent,FormsModule],
+  imports: [RouterOutlet, LoginComponent, FormsModule, NgIf, NgFor,RouterOutlet,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -115,6 +116,33 @@ export class AppComponent {
 
   name = '';
 
+  //-------------------------------------------------------------------------
+
+  //Directives in Angular
+
+  show = true;
+
+  //ngFor directive
+
+  // fruits = ['Apple', 'Banana', 'Mango', 'Orange'];
+
+  // students = [
+  //   {
+  //     id: 1,
+  //     name: 'Nikhil',
+  //     course: 'React',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Rahul',
+  //     course: 'Angular',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Priya',
+  //     course: 'Node.js',
+  //   },
+  // ];
 
 
 
