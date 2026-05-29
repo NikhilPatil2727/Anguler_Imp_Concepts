@@ -70,6 +70,39 @@ WritableSinga and Computed -->
 <!-- 
 Two way data binding -->
 
-<input type="text" [(ngModel)]="name" placeholder="Enter your name">
+<!-- <input type="text" [(ngModel)]="name" placeholder="Enter your name">
 
-<p>Your name is: {{ name }}</p>
+<p>Your name is: {{ name }}</p> -->
+
+<!-- Directives in Angular -->
+
+<h1 *ngIf="show">Welcome to Angular</h1>
+
+<!-- ngFor loop -->
+
+<!-- <div *ngFor="let fruit of fruits; let i = index">
+  {{ i + 1 }}. {{ fruit }}
+</div>
+
+
+<div *ngFor="let student of students">
+
+  <h2>ID: {{ student.id }}</h2>
+  <h3>Name: {{ student.name }}</h3>
+  <p>Course: {{ student.course }}</p>
+
+  <hr>
+
+</div> -->
+
+<!-- Routing in Angular -->
+  <a routerLink="/">Home</a>
+
+  <a routerLink="/about">About</a>
+
+  <a routerLink="/contact">Contact</a>
+
+  
+<router-outlet>
+
+</router-outlet>
