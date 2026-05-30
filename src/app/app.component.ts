@@ -8,13 +8,31 @@ import {
 } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+  FormsModule 
+ 
+} from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, FormsModule, NgIf, NgFor,RouterOutlet,RouterLink],
+  imports: [
+    RouterOutlet,
+    LoginComponent,
+    NgIf,
+    NgFor,
+    RouterOutlet,
+    RouterLink,
+    ReactiveFormsModule,
+    FormsModule 
+  ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -114,7 +132,7 @@ export class AppComponent {
   // //-------------------------------------------------------------------------
   //    Two way data binding
 
-  name = '';
+  // name = '';
 
   //-------------------------------------------------------------------------
 
@@ -143,6 +161,32 @@ export class AppComponent {
   //     course: 'Node.js',
   //   },
   // ];
+
+  // name = new FormControl('');
+  // password = new FormControl('');
+
+  // submitData() {
+  //   console.log('Name:', this.name.value);
+  //   console.log('Password:', this.password.value);
+  // }
+
+//   loginForm = new FormGroup({
+//     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+//     password: new FormControl('', [
+//       Validators.required,
+//       Validators.minLength(6),
+//     ]),
+//   });
+
+//   onSubmit() {
+//     console.log(this.loginForm.value);
+//   }
+
+
+addDetails(val:NgForm){
+console.log(val);
+}
+
 
 
 
