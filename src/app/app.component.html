@@ -96,7 +96,7 @@ Two way data binding -->
 </div> -->
 
 <!-- Routing in Angular -->
-  <a routerLink="/">Home</a>
+<!-- <a routerLink="/">Home</a>
 
   <a routerLink="/about">About</a>
 
@@ -105,4 +105,109 @@ Two way data binding -->
   
 <router-outlet>
 
-</router-outlet>
+</router-outlet> -->
+
+<!-- Reactive Forms in Angular -->
+<!-- <h2>Login Form</h2>
+
+<input
+  type="text"
+  placeholder="Enter Name"
+  [formControl]="name"
+>
+
+<br><br>
+
+<input
+  type="password"
+  placeholder="Enter Password"
+  [formControl]="password"
+>
+
+<br><br>
+
+<button (click)="submitData()">
+  Submit
+</button> -->
+
+<!--form group in reactive forms -->
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <label>Name</label>
+  <input
+    type="text"
+    formControlName="name"
+    placeholder="Enter Name"
+  >
+
+  @if(loginForm.get('name')?.errors?.['required'] &&
+      loginForm.get('name')?.touched){
+    <p>Name is required</p>
+  }
+
+  @if(loginForm.get('name')?.errors?.['minlength'] &&
+      loginForm.get('name')?.touched){
+    <p>Name must be at least 3 characters</p>
+  }
+
+  <br><br>
+
+  <label>Password</label>
+  <input
+    type="password"
+    formControlName="password"
+    placeholder="Enter Password"
+  >
+
+  @if(loginForm.get('password')?.errors?.['required'] &&
+      loginForm.get('password')?.touched){
+    <p>Password is required</p>
+  }
+
+  @if(loginForm.get('password')?.errors?.['minlength'] &&
+      loginForm.get('password')?.touched){
+    <p>Password must be at least 6 characters</p>
+  }
+
+  <br><br>
+
+  <button type="submit">
+    Submit
+  </button>
+
+</form> -->
+
+<!-- Template driven forms in Angular -->
+
+<form #userform="ngForm" (ngSubmit)="addDetails(userform.value)">
+
+  <input
+    type="text"
+    name="name"
+    ngModel
+    placeholder="Enter Name"
+  />
+
+  <br><br>
+
+  <input
+    type="password"
+    name="password"
+    ngModel
+    placeholder="Enter Password"
+  />
+
+  <br><br>
+
+  <select name="course" ngModel>
+    <option value="angular">Angular</option>
+    <option value="react">React</option>
+    <option value="vue">Vue</option>
+  </select>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
